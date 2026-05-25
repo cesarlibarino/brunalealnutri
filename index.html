@@ -1,178 +1,281 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruna Leal | Nutrição com olhar mais completo</title>
-    <style>
-        /* ==========================================
-           RESET & CONFIGURAÇÕES GERAIS
-           ========================================== */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bruna Leal | Nutrição & Estética Integrativa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          colors: {
+            brunaleal: {
+              bg: '#fdfdfb', /* Off-White Clínico Premium */
+              card: '#f6f4f0', /* Areia Acetinada */
+              brand: '#9e825b', /* Dourado Nobre / Ouro Velho */
+              brandHover: '#7e6645',
+              accent: '#c5a880', /* Champanhe Premium */
+              text: '#1c1e1d', /* Grafite de Alta Autoridade */
+              muted: '#5e6360'
+            }
+          }
         }
-        
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #121212; /* Fundo Escuro Premium */
-            color: #E0E0E0;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 620px; /* Alinhamento centralizado estilo mobile-first / Linktree Premium */
-            text-align: center;
-        }
-
-        /* ==========================================
-           HEADER (LOGOMARCA / IDENTIDADE)
-           ========================================== */
-        .header {
-            margin-bottom: 40px;
-        }
-
-        .brand-name {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 4px;
-            color: #FFFFFF;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        .brand-tagline {
-            font-size: 11px;
-            letter-spacing: 2px;
-            color: #D4AF37; /* Dourado Champagne */
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        /* ==========================================
-           HERO SECTION (DOBRA PRINCIPAL)
-           ========================================== */
-        .hero-section {
-            margin-bottom: 35px;
-        }
-
-        .headline {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.2;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
-
-        .headline span {
-            color: #D4AF37; /* Destaque em Dourado */
-        }
-
-        .subheadline {
-            font-size: 16px;
-            color: #A0A0A0;
-            max-width: 520px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .subheadline strong {
-            color: #FFFFFF;
-            font-weight: 600;
-        }
-
-        /* ==========================================
-           CTA BUTTON (BOTÃO DE CONVERSÃO)
-           ========================================== */
-        .cta-container {
-            margin-bottom: 45px;
-        }
-
-        .btn-cta {
-            display: inline-block;
-            background-color: #D4AF37; /* Botão Dourado */
-            color: #121212;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 18px 38px;
-            border-radius: 4px;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
-        }
-
-        /* ==========================================
-           FOTO DO EXPERT (PERFIL CIRCULAR)
-           ========================================== */
-        .image-container {
-            margin-bottom: 20px;
-        }
-
-        .profile-frame {
-            display: inline-block;
-            border: 2px solid #D4AF37;
-            padding: 6px;
-            border-radius: 50%;
-            background-color: transparent;
-        }
-
-        .circle-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            background-color: #222; /* Fundo preventivo se a foto falhar */
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .text-gradient { background: linear-gradient(to right, #9e825b, #c5a880); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
 </head>
-<body>
+<body class="bg-brunaleal-bg text-brunaleal-text font-sans antialiased selection:bg-brunaleal-brand/10 selection:text-brunaleal-brand">
 
-    <div class="container">
+  <header class="fixed top-0 w-full z-50 bg-[#fdfdfb]/80 backdrop-blur-md border-b border-brunaleal-brand/5">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 h-24 flex items-center justify-between">
+      <div class="text-xl font-bold tracking-tight text-brunaleal-text">
+        Bruna Leal <span class="text-brunaleal-accent text-xs block font-medium tracking-wider normal-case">Nutrição & Estética Integrativa ®</span>
+      </div>
+      <a href="https://api.whatsapp.com/send/?phone=5511996731445&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="bg-brunaleal-brand hover:bg-brunaleal-brandHover text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-full tracking-wide transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-sm">
+        Agendar Consulta
+      </a>
+    </div>
+  </header>
+
+  <section class="pt-40 pb-24 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+      
+      <div class="reveal active text-center lg:text-left">
+        <span class="inline-block bg-brunaleal-brand/5 text-brunaleal-brand border border-brunaleal-brand/10 text-xs sm:text-sm font-medium tracking-wider px-5 py-2 rounded-full mb-8">
+          Nutrição de Alto Padrão • Saúde Avançada
+        </span>
         
-        <header class="header">
-            <h2 class="brand-name">Bruna Leal</h2>
-            <p class="brand-tagline">Nutrição & Estética Integrativa</p>
-        </header>
-
-        <section class="hero-section">
-            <h1 class="headline">
-                RECONECTE-SE COM O SEU CORPO ATRAVÉS DE UM <span>OLHAR COMPLETO.</span>
-            </h1>
-            <p class="subheadline">
-                Esqueça abordagens superficiais. É sobre alinhar <strong>corpo, saúde e estética</strong> de forma integrada para destravar resultados reais e duradouros.
-            </p>
-        </section>
-
-        <div class="cta-container">
-            <a href="https://api.whatsapp.com/send/?phone=5511996731445&text&type=phone_number&app_absent=0&utm_source=ig" class="btn-cta" target="_blank">
-                Agendar Minha Consulta Privada
-            </a>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brunaleal-text leading-tight mb-8">
+          Reconecte-se com seu corpo através de um <span class="text-gradient block">olhar completo.</span>
+        </h1>
+        
+        <p class="text-brunaleal-muted text-lg sm:text-xl mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Esqueça as abordagens superficiais e dietas restritivas de prateleira. É hora de alinhar <strong class="text-brunaleal-brand font-semibold">corpo, saúde e estética</strong> de forma integrada para destravar resultados verdadeiramente duradouros.
+        </p>
+        
+        <div class="mb-8 lg:mb-0">
+          <a href="https://api.whatsapp.com/send/?phone=5511996731445&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="inline-flex items-center justify-center w-full sm:w-auto gap-3 bg-brunaleal-brand hover:bg-brunaleal-brandHover text-white font-semibold text-base tracking-wide px-10 py-5 rounded-full shadow-lg shadow-brunaleal-brand/10 transition-all duration-300 transform hover:-translate-y-0.5">
+            <i data-lucide="sparkles" class="w-5 h-5"></i> Agendar Minha Consulta Exclusiva
+          </a>
         </div>
+      </div>
 
-        <div class="image-container">
-            <div class="profile-frame">
-                <img src="bruna-leal.webp" alt="Bruna Leal - Nutricionista" class="circle-image">
-            </div>
+      <div class="reveal active flex justify-center lg:justify-end mb-10 lg:mb-0">
+        <div class="relative inline-block">
+          <div class="absolute inset-0 bg-brunaleal-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+          <img 
+            src="bruna-leal.webp" 
+            alt="Bruna Leal" 
+            class="relative mx-auto w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-full object-cover border-8 border-white shadow-xl transition-transform duration-500 hover:scale-102"
+          />
         </div>
+      </div>
 
     </div>
+  </section>
 
+  <section class="py-32 px-6 bg-brunaleal-card border-y border-brunaleal-brand/5">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="reveal max-w-2xl mx-auto mb-20">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+          Por que seus resultados estéticos <span class="text-brunaleal-brand">parecem bloqueados?</span>
+        </h2>
+        <p class="text-brunaleal-muted text-lg leading-relaxed">
+          Muitas vezes, a dificuldade em mudar a composição corporal ou acabar com o inchaço crônico não é falta de treino, mas sim um organismo inflamado que opera no modo de defesa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="reveal bg-[#fdfdfb] p-10 rounded-2xl border border-brunaleal-brand/5 shadow-sm group hover:border-brunaleal-accent/40 transition-all">
+          <div class="w-12 h-12 rounded-full bg-brunaleal-accent/10 text-brunaleal-brand flex items-center justify-center mb-6">
+            <i data-lucide="droplet" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 text-brunaleal-text">Inchaço & Retenção Crônica</h3>
+          <p class="text-brunaleal-muted leading-relaxed">Acordar se sentindo leve e terminar o dia com roupas apertadas e desconforto abdominal. Esse ciclo indica barreiras metabólicas e intestinais desalinhadas, que nenhuma drenagem resolve sozinha.</p>
+        </div>
+
+        <div class="reveal bg-[#fdfdfb] p-10 rounded-2xl border border-brunaleal-brand/5 shadow-sm group hover:border-brunaleal-accent/40 transition-all">
+          <div class="w-12 h-12 rounded-full bg-brunaleal-accent/10 text-brunaleal-brand flex items-center justify-center mb-6">
+            <i data-lucide="scale" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 text-brunaleal-text">Efeito Sanfona Estético</h3>
+          <p class="text-brunaleal-muted leading-relaxed">Perder peso na balança sacrificando massa magra e flacidez logo em seguida. Sem uma estratégia integrativa, você perde o tônus muscular e desacelera seu ritmo metabólico natural.</p>
+        </div>
+
+        <div class="reveal bg-[#fdfdfb] p-10 rounded-2xl border border-brunaleal-brand/5 shadow-sm group hover:border-brunaleal-accent/40 transition-all">
+          <div class="w-12 h-12 rounded-full bg-brunaleal-accent/10 text-brunaleal-brand flex items-center justify-center mb-6">
+            <i data-lucide="battery-low" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 text-brunaleal-text">Fome Ansiosa & Cansaço</h3>
+          <p class="text-brunaleal-muted leading-relaxed">Aquela queda drástica de energia no meio da tarde que te sabota e gera uma necessidade imediata de doces ou carboidratos para compensar o estresse da rotina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 px-6 max-w-5xl mx-auto">
+    <div class="reveal text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+        Sua saúde e estética merecem <span class="text-brunaleal-brand">respostas definitivas</span>
+      </h2>
+      <p class="text-brunaleal-muted text-lg leading-relaxed">
+        Tratamentos puramente estéticos externos ou dietas restritivas milagrosas apenas silenciam os sinais que o seu metabolismo está tentando te dar.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      <div class="reveal flex flex-col sm:flex-row items-start gap-6 bg-amber-50/20 p-8 rounded-2xl border border-brunaleal-brand/10">
+        <div class="w-10 h-10 rounded-full bg-brunaleal-accent/10 text-brunaleal-brand flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+          <i data-lucide="shield-alert" class="w-5 h-5"></i>
+        </div>
+        <div class="text-center sm:text-left">
+          <h3 class="text-lg font-semibold text-brunaleal-text mb-2">Restrições que envelhecem o metabolismo</h3>
+          <p class="text-brunaleal-muted text-sm sm:text-base">Passar fome ou cortar grupos alimentares inteiros destrói a sua flexibilidade metabólica, tornando seu organismo cada vez mais lento e propenso a estocar gordura.</p>
+        </div>
+      </div>
+
+      <div class="reveal flex flex-col sm:flex-row items-start gap-6 bg-amber-50/20 p-8 rounded-2xl border border-brunaleal-brand/10">
+        <div class="w-10 h-10 rounded-full bg-brunaleal-accent/10 text-brunaleal-brand flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+          <i data-lucide="shield-alert" class="w-5 h-5"></i>
+        </div>
+        <div class="text-center sm:text-left">
+          <h3 class="text-lg font-semibold text-brunaleal-text mb-2">Desconexão entre saúde interna e aparência</h3>
+          <p class="text-brunaleal-muted text-sm sm:text-base">Cuidar da pele, cabelo e definição de fora para dentro sem ajustar a absorção de nutrientes celular gera apenas melhoras temporárias. A verdadeira beleza é um reflexo sistêmico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 px-6 bg-brunaleal-card border-y border-brunaleal-brand/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        
+        <div class="reveal order-2 md:order-1 bg-[#fdfdfb] p-10 sm:p-12 rounded-2xl border border-brunaleal-brand/5 shadow-sm relative overflow-hidden">
+          <h4 class="text-xl font-bold mb-8 text-brunaleal-brand">Os Três Pilares do Método</h4>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <div class="mt-1 bg-brunaleal-brand text-white rounded-full p-1"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i></div>
+              <p class="text-brunaleal-text/90"><strong>Nutrição Eficiente Celular:</strong> Ajuste milimétrico de micronutrientes para otimizar energia e queimar gordura de forma natural.</p>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="mt-1 bg-brunaleal-brand text-white rounded-full p-1"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i></div>
+              <p class="text-brunaleal-text/90"><strong>Modulação de Inflamação & Estresse:</strong> Alinhamento do ecossistema intestinal para combater diretamente a retenção hídrica.</p>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="mt-1 bg-brunaleal-brand text-white rounded-full p-1"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i></div>
+              <p class="text-brunaleal-text/90"><strong>Estratégia Estética Avançada:</strong> Protocolo nutricional focado em manter a firmeza da pele, tônus muscular e longevidade ativa.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="order-1 md:order-2 space-y-8">
+          <div class="reveal">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+              Sincronia perfeita entre <span class="text-gradient">ciência e autoestima.</span>
+            </h2>
+            <p class="text-brunaleal-muted text-lg leading-relaxed">
+              O meu compromisso vai muito além de te entregar um plano de alimentação. Minha missão é decodificar como o seu organismo funciona e estruturar uma jornada personalizada, luxuosa e prática, feita para se adaptar ao seu estilo de vida dinâmico.
+            </p>
+          </div>
+          
+          <div class="reveal flex gap-5 items-start">
+            <div class="w-12 h-12 rounded-full bg-brunaleal-brand/5 text-brunaleal-brand flex items-center justify-center shrink-0">
+              <i data-lucide="gem" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-1 text-brunaleal-text">Acompanhamento Premium</h3>
+              <p class="text-brunaleal-muted text-sm sm:text-base">Modelos de consulta focados em alto nível de detalhamento focado em mulheres que buscam excelência em sua melhor versão física.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 px-6 max-w-6xl mx-auto">
+    <div class="reveal text-center max-w-2xl mx-auto mb-20">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+        Este direcionamento é <span class="text-brunaleal-brand">para você?</span>
+      </h2>
+      <p class="text-brunaleal-muted text-base sm:text-lg">
+        Desenvolvido especificamente para quem deseja elevar o nível dos seus resultados com embasamento sério.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="reveal bg-brunaleal-card p-8 rounded-2xl border border-brunaleal-brand/5">
+        <h3 class="text-lg font-bold text-brunaleal-brand uppercase tracking-wider mb-6 flex items-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5"></i> Encaixe perfeito se você:
+        </h3>
+        <ul class="space-y-4 text-sm sm:text-base text-brunaleal-muted">
+          <li class="flex items-start gap-2">✔ Busca emagrecimento ou definição preservando massa magra e firmeza.</li>
+          <li class="flex items-start gap-2">✔ Deseja acabar com o cansaço crônico e a oscilação de energia diária.</li>
+          <li class="flex items-start gap-2">✔ Valoriza um plano alimentar flexível, prazeroso e aplicável à sua rotina real.</li>
+          <li class="flex items-start gap-2">✔ Quer eliminar dores gastrointestinais e o desconforto do inchaço constante.</li>
+        </ul>
+      </div>
+
+      <div class="reveal bg-brunaleal-card p-8 rounded-2xl border border-black/5 opacity-75">
+        <h3 class="text-lg font-bold text-gray-500 uppercase tracking-wider mb-6 flex items-center gap-2">
+          <i data-lucide="x-circle" class="w-5 h-5 text-gray-400"></i> Não se aplica se você:
+        </h3>
+        <ul class="space-y-4 text-sm sm:text-base text-brunaleal-muted">
+          <li class="flex items-start gap-2">✕ Procura por shakes milagrosos substitutos de refeição ou remédios de emagrecimento rápido.</li>
+          <li class="flex items-start gap-2">✕ Quer apenas um papel de dieta genérico sem mudar seus hábitos estruturais de saúde.</li>
+          <li class="flex items-start gap-2">✕ Não está disposta a investir no seu próprio bem-estar a médio e longo prazo.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 px-6 bg-brunaleal-card text-center border-t border-brunaleal-brand/5">
+    <div class="reveal max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-8 leading-tight">
+        Conquiste sua melhor versão. <span class="text-brunaleal-brand">Por inteiro.</span>
+      </h2>
+      <p class="text-brunaleal-muted text-lg sm:text-xl mb-12 leading-relaxed">
+        Dê ao seu corpo o cuidado sofisticado que ele merece. Toque no botão abaixo para alinhar suas metas com a minha equipe no WhatsApp e escolher o formato ideal para o seu atendimento.
+      </p>
+
+      <div class="flex flex-col items-center gap-4">
+        <a href="https://api.whatsapp.com/send/?phone=5511996731445&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="inline-flex items-center gap-3 bg-brunaleal-brand hover:bg-brunaleal-brandHover text-white font-semibold text-base tracking-wide px-12 py-5 rounded-full shadow-lg shadow-brunaleal-brand/10 transition-all duration-300 transform hover:-translate-y-0.5">
+          <i data-lucide="message-square" class="w-5 h-5"></i> Agendar Minha Consulta via WhatsApp
+        </a>
+        <div class="flex items-center gap-2 text-brunaleal-brand text-xs uppercase tracking-wider font-semibold mt-2">
+          <span class="w-1.5 h-1.5 bg-brunaleal-brand rounded-full animate-ping"></span>
+          Atendimentos presenciais exclusivos e online integrativo
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-xs text-brunaleal-muted bg-[#fdfdfb] border-t border-brunaleal-brand/5">
+    <p>&copy; 2026 Bruna Leal | Nutrição & Estética Integrativa | Atendimento Clínico Premium</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { 
+        if(e.isIntersecting) { 
+          e.target.classList.add('active'); 
+          observer.unobserve(e.target); 
+        } 
+      });
+    }, { threshold: 0.1 });
+    
+    reveals.forEach(r => observer.observe(r));
+  </script>
 </body>
 </html>
