@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Leal | Nutrição com olhar mais completo</title>
+    <style>
+        /* ==========================================
+           RESET & CONFIGURAÇÕES GERAIS
+           ========================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #121212; /* Fundo Escuro Premium */
+            color: #E0E0E0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 620px; /* Alinhamento centralizado estilo mobile-first / Linktree Premium */
+            text-align: center;
+        }
+
+        /* ==========================================
+           HEADER (LOGOMARCA / IDENTIDADE)
+           ========================================== */
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .brand-name {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .brand-tagline {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #D4AF37; /* Dourado Champagne */
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* ==========================================
+           HERO SECTION (DOBRA PRINCIPAL)
+           ========================================== */
+        .hero-section {
+            margin-bottom: 35px;
+        }
+
+        .headline {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .headline span {
+            color: #D4AF37; /* Destaque em Dourado */
+        }
+
+        .subheadline {
+            font-size: 16px;
+            color: #A0A0A0;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .subheadline strong {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        /* ==========================================
+           CTA BUTTON (BOTÃO DE CONVERSÃO)
+           ========================================== */
+        .cta-container {
+            margin-bottom: 45px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: #D4AF37; /* Botão Dourado */
+            color: #121212;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 18px 38px;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ==========================================
+           FOTO DO EXPERT (PERFIL CIRCULAR)
+           ========================================== */
+        .image-container {
+            margin-bottom: 20px;
+        }
+
+        .profile-frame {
+            display: inline-block;
+            border: 2px solid #D4AF37;
+            padding: 6px;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+
+        .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            background-color: #222; /* Fundo preventivo se a foto falhar */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header">
+            <h2 class="brand-name">Bruna Leal</h2>
+            <p class="brand-tagline">Nutrição & Estética Integrativa</p>
+        </header>
+
+        <section class="hero-section">
+            <h1 class="headline">
+                RECONECTE-SE COM O SEU CORPO ATRAVÉS DE UM <span>OLHAR COMPLETO.</span>
+            </h1>
+            <p class="subheadline">
+                Esqueça abordagens superficiais. É sobre alinhar <strong>corpo, saúde e estética</strong> de forma integrada para destravar resultados reais e duradouros.
+            </p>
+        </section>
+
+        <div class="cta-container">
+            <a href="https://api.whatsapp.com/send/?phone=5511996731445&text&type=phone_number&app_absent=0&utm_source=ig" class="btn-cta" target="_blank">
+                Agendar Minha Consulta Privada
+            </a>
+        </div>
+
+        <div class="image-container">
+            <div class="profile-frame">
+                <img src="bruna-leal.webp" alt="Bruna Leal - Nutricionista" class="circle-image">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
